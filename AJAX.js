@@ -1,16 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>AJAX Example</title>
-	<script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
-</head>
-<body>
-	
-	
 
-	<script>
-		var sf = function(){
+
+
+
+
+
+var sf = function(){
 			$.get( "http://api.openweathermap.org/data/2.5/weather?q=San%20Francisco&mode=json&units=imperial&APPID=93b03ba103c6cabec96f47a6f650769e", function( weather_data ) {
 			$( "#container" ).append( "Today's Temp: "+ weather_data.main.temp +"<br>");
 			$( "#container" ).append( "Today's High: " + weather_data.main.temp_max +"<br>");
@@ -25,11 +19,4 @@
 				console.log((weather_data));
 			});
 		}
-	//sf();
-	</script>
-
-	
-
-
-</body>
-</html>
+sf();
